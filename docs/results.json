@@ -1,0 +1,230 @@
+{
+  "dataset": {
+    "samples": 540,
+    "features": 9,
+    "benign": 301,
+    "malignant": 239
+  },
+  "cv": {
+    "splits": 5,
+    "repeats": 10
+  },
+  "models": {
+    "Majority class": {
+      "accuracy": {
+        "mean": 0.5574074074074075,
+        "std": 0.0037037037037036757
+      },
+      "precision": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "recall": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "f1": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "roc_auc": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "pr_auc": {
+        "mean": 0.44259259259259254,
+        "std": 0.0037037037037036978
+      },
+      "false_negatives": {
+        "mean": 47.8,
+        "std": 0.4
+      },
+      "false_positives": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "Logistic regression": {
+      "accuracy": {
+        "mean": 0.9638888888888889,
+        "std": 0.017592592592592583
+      },
+      "precision": {
+        "mean": 0.9657216344285457,
+        "std": 0.025954242221869456
+      },
+      "recall": {
+        "mean": 0.9530939716312057,
+        "std": 0.034775250111912334
+      },
+      "f1": {
+        "mean": 0.9587982701905966,
+        "std": 0.02047706758266292
+      },
+      "roc_auc": {
+        "mean": 0.9948488136069449,
+        "std": 0.004812405286287482
+      },
+      "pr_auc": {
+        "mean": 0.992888824285496,
+        "std": 0.007097570407351502
+      },
+      "false_negatives": {
+        "mean": 2.24,
+        "std": 1.6560193235587561
+      },
+      "false_positives": {
+        "mean": 1.66,
+        "std": 1.3358143583597235
+      }
+    },
+    "Random forest": {
+      "accuracy": {
+        "mean": 0.9716666666666667,
+        "std": 0.013659839708081503
+      },
+      "precision": {
+        "mean": 0.9581523145140995,
+        "std": 0.0247849935390556
+      },
+      "recall": {
+        "mean": 0.9794769503546098,
+        "std": 0.01851951203364949
+      },
+      "f1": {
+        "mean": 0.9684245945644622,
+        "std": 0.015137748726634662
+      },
+      "roc_auc": {
+        "mean": 0.9924312495155602,
+        "std": 0.006409725508294675
+      },
+      "pr_auc": {
+        "mean": 0.9889136107326131,
+        "std": 0.010194514350354148
+      },
+      "false_negatives": {
+        "mean": 0.98,
+        "std": 0.8829496021857646
+      },
+      "false_positives": {
+        "mean": 2.08,
+        "std": 1.2936769303036981
+      }
+    },
+    "MLP (original, unscaled)": {
+      "accuracy": {
+        "mean": 0.9414814814814814,
+        "std": 0.02410539273373775
+      },
+      "precision": {
+        "mean": 0.9454875509250974,
+        "std": 0.03940767801156136
+      },
+      "recall": {
+        "mean": 0.9230141843971631,
+        "std": 0.04373708105765278
+      },
+      "f1": {
+        "mean": 0.9330398204906467,
+        "std": 0.027961484793367318
+      },
+      "roc_auc": {
+        "mean": 0.9736665915784986,
+        "std": 0.01834982489509261
+      },
+      "pr_auc": {
+        "mean": 0.973999361488572,
+        "std": 0.017629937896465074
+      },
+      "false_negatives": {
+        "mean": 3.68,
+        "std": 2.092271492899523
+      },
+      "false_positives": {
+        "mean": 2.64,
+        "std": 2.007585614612737
+      }
+    },
+    "MLP (scaled, 300 epochs)": {
+      "accuracy": {
+        "mean": 0.9638888888888889,
+        "std": 0.016997740509894273
+      },
+      "precision": {
+        "mean": 0.9597473699083752,
+        "std": 0.026444519727487587
+      },
+      "recall": {
+        "mean": 0.9594060283687942,
+        "std": 0.02725484860388889
+      },
+      "f1": {
+        "mean": 0.9592022831925795,
+        "std": 0.01922183819042788
+      },
+      "roc_auc": {
+        "mean": 0.9942304116769368,
+        "std": 0.005168571080426695
+      },
+      "pr_auc": {
+        "mean": 0.9923491939988306,
+        "std": 0.007026403195563553
+      },
+      "false_negatives": {
+        "mean": 1.94,
+        "std": 1.3024592124131948
+      },
+      "false_positives": {
+        "mean": 1.96,
+        "std": 1.3410443691392167
+      }
+    }
+  },
+  "target_recall": 0.99,
+  "operating_points": {
+    "Logistic regression": {
+      "default": {
+        "threshold": 0.5,
+        "false_negatives": 12,
+        "false_positives": 8
+      },
+      "tuned": {
+        "threshold": 0.22558487047195075,
+        "recall": 0.9916317991631799,
+        "precision": 0.9556451612903226,
+        "false_negatives": 2,
+        "false_positives": 11
+      }
+    },
+    "Random forest": {
+      "default": {
+        "threshold": 0.5,
+        "false_negatives": 7,
+        "false_positives": 11
+      },
+      "tuned": {
+        "threshold": 0.41,
+        "recall": 0.9916317991631799,
+        "precision": 0.948,
+        "false_negatives": 2,
+        "false_positives": 13
+      }
+    },
+    "MLP (scaled, 300 epochs)": {
+      "default": {
+        "threshold": 0.5,
+        "false_negatives": 10,
+        "false_positives": 10
+      },
+      "tuned": {
+        "threshold": 0.17705084383487701,
+        "recall": 0.99581589958159,
+        "precision": 0.952,
+        "false_negatives": 1,
+        "false_positives": 12
+      }
+    }
+  },
+  "primary_model": "Logistic regression"
+}
