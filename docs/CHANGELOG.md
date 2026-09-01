@@ -93,29 +93,16 @@ the real decision lives.
 
 ---
 
-## Profile README (needs one manual step)
+## Profile README — done
 
-`github.com/PG-1012/PG-1012` does not exist. That is the special repo whose
-README renders on your profile page. Creating a repo needs the GitHub API,
-and this machine has SSH auth only — SSH can push to existing repos but
-cannot create one.
+`github.com/PG-1012/PG-1012` was created and populated on 2026-09-01. It now
+carries a self-hosted terminal-style banner and a language card, both generated
+by scripts in that repo's `assets/` and swapped light/dark via `<picture>`.
 
-A draft is at `docs/profile-README-draft.md`. To use it:
+`docs/profile-README-draft.md` in this repo was the earlier plain draft; it is
+superseded and can be deleted whenever you like.
 
-1. Create a **public** repo named exactly `PG-1012`, with "Add a README" ticked
-2. Then:
-
-```bash
-git clone git@github.com:PG-1012/PG-1012.git
-cp <this repo>/docs/profile-README-draft.md PG-1012/README.md
-cd PG-1012 && git add -A && git commit -m "Add profile README" && git push
-```
-
-The draft keeps your existing bio (fintech, Toronto, likes learning things)
-and adds one line per showcase project. It does not invent employers, titles,
-dates or credentials.
-
-**Also worth updating by hand:** the repo description on GitHub still reads
+**Still needs doing by hand:** the repo description on GitHub still reads
 *"Machine learning model that tries to determine if a person is at risk of
 cancer…"*. Changing it needs the API too. Suggested replacement:
 
